@@ -1,0 +1,6 @@
+
+LIBRARY "DLL_NAME"
+
+EXPORTS
+	"ExportedFunction1Name"
+	"ExportedFunction2Name"
