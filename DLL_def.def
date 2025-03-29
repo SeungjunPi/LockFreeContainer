@@ -1,6 +1,6 @@
 
-LIBRARY "DLL_NAME"
+LIBRARY LockFreeContainer
 
 EXPORTS
-	"ExportedFunction1Name"
-	"ExportedFunction2Name"
+	AcquireSpinLock
+	ReleaseSpinLock

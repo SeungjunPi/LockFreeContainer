@@ -71,7 +71,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <OutDir>$(SolutionDir)..\DLL</OutDir>
+    <OutDir>$(SolutionDir)..\DLL\</OutDir>
     <IntDir>$(Platform)\$(Configuration)\</IntDir>
     <TargetName>$(ProjectName)_x64_debug</TargetName>
   </PropertyGroup>
@@ -112,7 +112,7 @@
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_DEBUG;DLLDECLSPEC_EXPORTS;_WINDOWS;_USRDLL;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>false</ConformanceMode>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <PrecompiledHeader>Use</PrecompiledHeader>
@@ -150,14 +150,24 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="dllmain.cpp" />
+    <ClCompile Include="LockFreePool.cpp" />
+    <ClCompile Include="LockFreeQueue.cpp" />
+    <ClCompile Include="LockFreeStack.cpp" />
     <ClCompile Include="pch.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="SpinLock.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="..\LockFreeContainerInterface\ILockFreeStack.h" />
+    <ClInclude Include="IndexLockFreeStack.h" />
+    <ClInclude Include="LockFreePool.h" />
+    <ClInclude Include="LockFreeStack.h" />
     <ClInclude Include="pch.h" />
+    <ClInclude Include="SpinLock.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="cpp.hint" />
     <None Include="DLL_def.def" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

@@ -19,6 +19,18 @@
     <Filter Include="MainEntry">
       <UniqueIdentifier>{f014c1c3-ee4b-4941-929d-83db433c63e2}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Stack">
+      <UniqueIdentifier>{d6d6f09c-2004-49a6-9878-ca7a234e7c41}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Interface">
+      <UniqueIdentifier>{5ad77087-08d4-438e-a271-b125f8eede70}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Queue">
+      <UniqueIdentifier>{fcfab55e-1840-46cd-89df-2e4050b556b4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Pool">
+      <UniqueIdentifier>{eb6f4bc7-1a4a-42ab-b490-5fbe1c856ffa}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="pch.cpp">
@@ -27,15 +39,43 @@
     <ClCompile Include="dllmain.cpp">
       <Filter>MainEntry</Filter>
     </ClCompile>
+    <ClCompile Include="SpinLock.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LockFreeStack.cpp">
+      <Filter>Stack</Filter>
+    </ClCompile>
+    <ClCompile Include="LockFreeQueue.cpp">
+      <Filter>Queue</Filter>
+    </ClCompile>
+    <ClCompile Include="LockFreePool.cpp">
+      <Filter>Pool</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="pch.h">
       <Filter>pch</Filter>
+    </ClInclude>
+    <ClInclude Include="IndexLockFreeStack.h">
+      <Filter>Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="SpinLock.h">
+      <Filter>헤더 파일</Filter>
+    </ClInclude>
+    <ClInclude Include="..\LockFreeContainerInterface\ILockFreeStack.h">
+      <Filter>Interface</Filter>
+    </ClInclude>
+    <ClInclude Include="LockFreeStack.h">
+      <Filter>Stack</Filter>
+    </ClInclude>
+    <ClInclude Include="LockFreePool.h">
+      <Filter>Pool</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="DLL_def.def">
       <Filter>소스 파일</Filter>
     </None>
+    <None Include="cpp.hint" />
   </ItemGroup>
 </Project>
